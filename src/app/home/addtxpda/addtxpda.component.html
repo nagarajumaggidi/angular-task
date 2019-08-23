@@ -1,0 +1,328 @@
+<div class="container mt-5">
+
+  <form [formGroup]="gstinvoiceform">
+   <!-- txpda starts -->
+   <div >
+    <div role="tabpanel" class="tab-pane fade show active">
+
+        <div class="tile">
+            <h2 class="mb-5">Txpda</h2>
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">GSTIN Number</label>
+
+                        <input type="text" class="form-control" id="firstname"
+                            placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                        <span style="color:red"
+                            *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                                GSTIN Number is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Return Period</label>
+
+                        <input type="text" class="form-control" id="lastname"
+                            placeholder="Enter return period " formControlName="ret_period">
+                            
+                        <span style="color:red"
+                        *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                        <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                          Return Period is required
+
+                        </span>
+
+                    </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Gross Turn over in Financial year </label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                            formControlName="gt">
+                                   
+                        <span style="color:red"
+                        *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                        <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                          Gross Turn over is required
+
+                        </span>
+
+                    </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Gross Turn nover</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                            formControlName="cur_gt">
+
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+
+                              Gross Turn over is required
+
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Original Month</label>
+
+                        <input type="text" class="form-control" id="firstname" placeholder="Enter Original Month"
+                            formControlName="omontxpda">
+                            
+                        <span style="color:red"
+                        *ngIf="gstinvoiceform.get('omontxpda').touched && gstinvoiceform.get('omontxpda').invalid">
+
+                        <span *ngIf="gstinvoiceform.get('omontxpda').errors.required">
+
+                            Original Month is required
+
+                        </span>
+
+                    </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Place of Supply</label>
+
+                        <input type="text" class="form-control" id="firstname" placeholder="Enter Place of Supply"
+                            formControlName="postxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('postxpda').touched && gstinvoiceform.get('postxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('postxpda').errors.required">
+    
+                                Place of Supply is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Original Supply Type</label>
+
+                        <input type="text" class="form-control" id="lastname"
+                            placeholder="Enter Original Supply Type" formControlName="sply_tytxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('sply_tytxpda').touched && gstinvoiceform.get('sply_tytxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('sply_tytxpda').errors.required">
+    
+                                Supply Type is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Differential percentage</label>
+
+                        <input type="number" class="form-control" id="lastname"
+                            placeholder="Enter Differential percentage" formControlName="diff_percenttxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('diff_percenttxpda').touched && gstinvoiceform.get('diff_percenttxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('diff_percenttxpda').errors.required">
+    
+                                Differential percentage is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <br>
+
+
+            <h2>Item Details</h2>
+            <div class="row">
+
+
+
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Rate of Invoice</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                            formControlName="rttxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('rttxpda').touched && gstinvoiceform.get('rttxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('rttxpda').errors.required">
+    
+                                Rate of Invoice is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Advance to be adjusted</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                            formControlName="ad_amttxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('ad_amttxpda').touched && gstinvoiceform.get('ad_amttxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('ad_amttxpda').errors.required">
+    
+                                Advance to be adjusted is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">IGST Amount as per invoice</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                            formControlName="iamttxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('iamttxpda').touched && gstinvoiceform.get('iamttxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('iamttxpda').errors.required">
+    
+                                IGST  is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Cess Amount as per invoice</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Number"
+                            formControlName="csamttxpda">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('csamttxpda').touched && gstinvoiceform.get('csamttxpda').invalid">
+    
+                            <span *ngIf="gstinvoiceform.get('csamttxpda').errors.required">
+    
+                                Cess Amount as per invoice is required
+    
+                            </span>
+    
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-success"
+                (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+            <button type="button" class="btn btn-danger ml-4"
+                (click)="gstinvoiceform.reset()">Cancel</button>
+            <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+        </div>
+       
+    </div>
+</div>
+<!-- txpd ends -->
+   </form>
+ </div>
+ 

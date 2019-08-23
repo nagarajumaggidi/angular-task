@@ -1,0 +1,295 @@
+<div class="container mt-5">
+
+ 
+  <form [formGroup]="gstinvoiceform">
+  
+  <!-- doc_issue starts -->
+  <div>
+    <div role="tabpanel" class="tab-pane fade show active">
+
+        <div class="tile">
+            <h2 class="mb-5">Doc</h2>
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">GSTIN Number</label>
+
+                        <input type="text" class="form-control" id="firstname"
+                            placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                        <span style="color:red"
+                            *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                                GSTIN Number is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Return Period</label>
+
+                        <input type="text" class="form-control" id="lastname"
+                            placeholder="Enter return period " formControlName="ret_period">
+                            
+                        <span style="color:red"
+                        *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                        <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                          Return Period is required
+
+                        </span>
+
+                    </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Gross Turn over in Financial year </label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                            formControlName="gt">
+                                   
+                        <span style="color:red"
+                        *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                        <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                          Gross Turn over is required
+
+                        </span>
+
+                    </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Gross Turn nover</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                            formControlName="cur_gt">
+
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+
+                              Gross Turn over is required
+
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Document Number</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Document Number"
+                            formControlName="doc_num">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('doc_num').touched && gstinvoiceform.get('doc_num').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('doc_num').errors.required">
+
+                                Document Number is required
+
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+
+                        <label for="firstname" class="control-label">Serial Number</label>
+
+                        <input type="number" class="form-control" id="firstname" placeholder="Enter Serial Number"
+                            formControlName="numdoc">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('numdoc').touched && gstinvoiceform.get('numdoc').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('numdoc').errors.required">
+
+                                Serial Number is required
+
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">from</label>
+
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter from"
+                            formControlName="from">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('from').touched && gstinvoiceform.get('from').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('from').errors.required">
+
+                                from is required
+
+                            </span>
+
+                        </span>
+
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">To serial number</label>
+
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter To serial number"
+                            formControlName="to">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('to').touched && gstinvoiceform.get('to').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('to').errors.required">
+
+                                To is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Total Number</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Total Number"
+                            formControlName="totnum">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('totnum').touched && gstinvoiceform.get('totnum').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('totnum').errors.required">
+
+                                Total Number is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Cancelled</label>
+
+                        <input type="number" class="form-control" id="lastname" placeholder="Enter Cancelled"
+                            formControlName="cancel">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('cancel').touched && gstinvoiceform.get('cancel').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('cancel').errors.required">
+
+                                Cancelled is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group">
+
+                        <label for="lastname" class="control-label">Net issued</label>
+
+                        <input type="number" class="form-control" id="lastname"
+                            placeholder="Enter Net issued" formControlName="net_issue">
+                            <span style="color:red"
+                            *ngIf="gstinvoiceform.get('net_issue').touched && gstinvoiceform.get('net_issue').invalid">
+
+                            <span *ngIf="gstinvoiceform.get('net_issue').errors.required">
+
+                                Net issued is required
+
+                            </span>
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+
+
+
+            <button type="button" class="btn btn-success"
+                (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+            <button type="button" class="btn btn-danger ml-4"
+                (click)="gstinvoiceform.reset()">Cancel</button>
+            <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+        </div>
+       
+    </div>
+</div>
+</form>
+</div>
+<!-- doc_issue ends -->

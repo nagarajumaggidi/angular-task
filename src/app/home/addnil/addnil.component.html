@@ -1,0 +1,220 @@
+<div class="container mt-5">
+    <!-- expa starts -->
+    <form [formGroup]="gstinvoiceform">
+        <div>
+            <div role="tabpanel" class="tab-pane fade show active" id="Nil">
+
+
+                <div class="tile">
+                    <h2 class="mb-5">Nill-Add invoice</h2>
+                    <div class="row">
+
+                        <div class="col-md-3">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">GSTIN Number</label>
+
+                                <input type="text" class="form-control" id="firstname"
+                                    placeholder="Enter GSTIN of the Tax Payer" formControlName="gstin">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gstin').touched && gstinvoiceform.get('gstin').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gstin').errors.required">
+
+                                        GSTIN Number is required
+
+                                    </span>
+
+                                </span>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Return Period</label>
+
+                                <input type="text" class="form-control" id="lastname" placeholder="Enter return period "
+                                    formControlName="ret_period">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('ret_period').touched && gstinvoiceform.get('ret_period').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('ret_period').errors.required">
+
+                                        Return Period is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turn over in Financial year </label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="gt">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('gt').touched && gstinvoiceform.get('gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('gt').errors.required">
+
+                                        Gross Turn over is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+
+                                <label for="lastname" class="control-label">Gross Turn nover</label>
+
+                                <input type="number" class="form-control" id="lastname" placeholder="Enter Number"
+                                    formControlName="cur_gt">
+
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('cur_gt').touched && gstinvoiceform.get('cur_gt').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('cur_gt').errors.required">
+
+                                        Gross Turn over is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Supply Type</label>
+
+                                <input type="text" class="form-control" id="firstname" placeholder="Enter Supply Type"
+                                    formControlName="sply_tynill">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('sply_tynill').touched && gstinvoiceform.get('sply_tynill').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('sply_tynill').errors.required">
+
+                                        Supply Type is required
+
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Total Exempted outward supplies</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter Total Exempted outward supplies" formControlName="expt_amtnill">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('expt_amtnill').touched && gstinvoiceform.get('expt_amtnill').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('expt_amtnill').errors.required">
+
+                                        Total Exempted  Outward Supplies is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Total Nil rated outward
+                                    supplies</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter Total Nil rated outward supplies" formControlName="nil_amtnill">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('nil_amtnill').touched && gstinvoiceform.get('nil_amtnill').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('nil_amtnill').errors.required">
+
+                                        Total Nil rated outward supplies is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="form-group form-group-sm">
+
+                                <label for="firstname" class="control-label">Total Non GST outward supplies</label>
+
+                                <input type="number" class="form-control" id="firstname"
+                                    placeholder="Enter Total Non GST outward supplies" formControlName="ngsup_amtnill">
+                                <span style="color:red"
+                                    *ngIf="gstinvoiceform.get('ngsup_amtnill').touched && gstinvoiceform.get('ngsup_amtnill').invalid">
+
+                                    <span *ngIf="gstinvoiceform.get('ngsup_amtnill').errors.required">
+
+                                        Total Non GST outward supplies is required
+
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-success"
+                        (click)="saveGSTInvoiceobj(gstinvoiceform.value)">Add</button>
+
+                    <button type="button" class="btn btn-danger ml-4" (click)="gstinvoiceform.reset()">Cancel</button>
+                    <button type="button" class="btn btn-warning ml-4" (click)="backClicked()">Back</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- nil end-->
